@@ -1,0 +1,14 @@
+// Font Awesome Icons
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Bootswatch Variables (Lux)
+@import 'vendor/variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Bootswatch Theme (Lux)
+@import 'vendor/bootswatch';
+
+// Custom Styles
+@import 'custom-styles';

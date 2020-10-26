@@ -1,0 +1,49 @@
+version: '3'
+
+networks:
+  django:
+
+services:
+  web:
+    container_name: empire-website
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/web
+    command: >
+      sh -c 'python manage.py runserver 0.0.0.0:8000'
+    environment:
+      - DB_POSTGRESQL=True
+      - DB_HOST=db
+      - DB_DATABASE=empire-website_db
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=supersecretpassword
+    depends_on:
+      - db
+    networks:
+      - django
+
+  db:
+    image: postgres:10-alpine
+    container_name: postgresql
+    ports:
+      - "5432:5432"
+    tty: true
+    environment:
+      - POSTGRES_DB=empire-website_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecretpassword
+    networks:
+      - django
+
+  yarn:
+    image: node:13.7
+    container_name: yarn
+    volumes:
+      - .:/web
+    working_dir: /web
+    entrypoint: ['yarn']
+    networks:
+      - django
