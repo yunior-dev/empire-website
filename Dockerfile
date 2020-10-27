@@ -7,7 +7,8 @@ ENV PYTHONUNBUFFERED 1
 COPY ./requirements/development.txt /requirements.txt
 RUN apk add --update --no-cache postgresql-client jpeg-dev zlib-dev
 RUN apk add --update --no-cache --virtual .tmp-build-deps \
-  gcc libc-dev linux-headers postgresql-dev
+  gcc libc-dev linux-headers postgresql-dev musl-dev libffi-dev
+RUN pip install -U  cffi pip setuptools
 RUN pip install -r requirements.txt
 RUN apk del .tmp-build-deps
 
