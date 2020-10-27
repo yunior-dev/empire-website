@@ -1,0 +1,21 @@
+{% extends 'admin/base.html' %}
+{% load mix %}
+{% load static %}
+
+{% block title %}
+Admin | Empire Real Estate
+{% endblock %}
+
+{% block branding %}
+  <h1 id="head">
+    <img src="{% static 'img/icon.png' %}" alt="Empire Real Estate" class="logo" height="28" width="28">
+    <span class="admin_area">Admin Area</span>
+  </h1>
+{% endblock %}
+
+{% block extrastyle %}
+  <link rel="stylesheet" href="{% mix 'css/admin/base.css' 'static' %}">
+  <link rel="stylesheet" href="{% mix 'css/admin/admin.css' 'static' %}">
+  <link rel="stylesheet" href="{% mix 'css/admin/nav_sidebar.css' 'static' %}">
+  <link rel="stylesheet" href="{% mix 'css/admin/forms.css' 'static' %}">
+{% endblock %}

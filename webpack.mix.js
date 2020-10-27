@@ -31,3 +31,17 @@ mix.js(`${resourcesPath}/js/app.js`, `${staticPath}/js/`)
 mix.sass(`${resourcesPath}/sass/app.scss`, `${staticPath}/css/`).options({
   processCssUrls: false,
 })
+
+// Overrides django default admin site.
+mix.sass(`${resourcesPath}/sass/admin/base.scss`, `${staticPath}/css/admin/`).options({
+  processCssUrls: false,
+})
+mix.sass(`${resourcesPath}/sass/admin/admin.scss`, `${staticPath}/css/admin/`).options({
+  processCssUrls: false,
+})
+mix.sass(`${resourcesPath}/sass/admin/nav_sidebar.scss`, `${staticPath}/css/admin/`).options({
+  processCssUrls: false,
+})
+mix.sass(`${resourcesPath}/sass/admin/forms.scss`, `${staticPath}/css/admin/`).options({
+  processCssUrls: false,
+})

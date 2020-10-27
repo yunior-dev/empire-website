@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body, td, th, input{
+  font-family: 'Nunito', sans-serif;
+}
+
+tr:nth-child(2n), tr:nth-child(2n) .errorlist, tr:nth-child(2n+1) + .row-form-errors, tr:nth-child(2n+1) + .row-form-errors .errorlist {
+  background: #FFF;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.50rem;
+}
+
+#content-related {
+  background: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#content-related .module h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.25rem;
+}
+
+.button, input[type="submit"], input[type="button"], .submit-row input, a.button {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:active, input[type=submit]:active, input[type=button]:active,
+.button:focus, input[type=submit]:focus, input[type=button]:focus,
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #070707;
+    border-color: #1a1a1a;
+}
+
+.object-tools a:link, .object-tools a:visited {
+  background-color: #919aa1;
+}
+
+.object-tools a:focus, .object-tools a:hover {
+  background-color: #1a1a1a;
+}
+
+.button.default, input[type="submit"].default, .submit-row input.default {
+  background: #919aa1;
+}
+
+.button.default:active, input[type=submit].default:active,
+.button.default:focus, input[type=submit].default:focus,
+.button.default:hover, input[type=submit].default:hover {
+    background: #1a1a1a;
+}
+
+.delete-confirmation form .cancel-link {
+  background: #1a1a1a;
+  border-radius: 0px;
+  color: #FFF;
+}
+
+.delete-confirmation form .cancel-link:active,
+.delete-confirmation form .cancel-link:focus,
+.delete-confirmation form .cancel-link:hover {
+    background: #070707;
+    border-color: #1a1a1a;
+}
+
+.delete-confirmation form input[type="submit"] {
+  background: #e53e3e;
+  border-radius: 0px !important;
+}
+
+.delete-confirmation form input[type="submit"]:active,
+.delete-confirmation form input[type="submit"]:focus,
+.delete-confirmation form input[type="submit"]:hover {
+    background: #c53030;
+}
