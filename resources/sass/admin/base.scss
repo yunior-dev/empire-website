@@ -84,3 +84,9 @@ h1 {
 .delete-confirmation form input[type="submit"]:hover {
     background: #c53030;
 }
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], input[type="tel"], textarea, select, .vTextField {
+  border-radius: 0px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  outline: none;
+}
