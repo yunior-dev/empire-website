@@ -2,6 +2,6 @@ from django.urls import include, path
 
 urlpatterns = [
     # Add your web urls here
-    path('listings/', include('listings.urls')),
-    path('', include('pages.urls')),
+    path('listings/', include('apps.listings.urls')),
+    path('', include('apps.pages.urls')),
 ]
