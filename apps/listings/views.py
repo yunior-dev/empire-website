@@ -11,7 +11,7 @@ def index(request):
     return render(request, template, context)
 
 
-def listing(request):
+def listing(request, listing_id):
     template = 'listings/listing.html'
     context = {}
     return render(request, template, context)
